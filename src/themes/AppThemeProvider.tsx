@@ -35,6 +35,7 @@ declare module '@mui/material/styles' {
   }
   interface PaletteOptions {
     gradient: TypeGradient;
+    Icon: TypeColor;
     Ink: TypeColor;
     Sky: TypeColor;
     Red: TypeColor;
@@ -91,12 +92,27 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
     createTheme({
       palette: {
         mode: mode as PaletteMode,
+
+        // Base: {
+        //   IndianRed: '#F2545C',
+        //   AmaranthPurple: '#A93F55',
+        //   RichBlack: '#0D1821',
+        //   MintCream: '#F3F7F0',
+        //   RoseTaupe: '#8C5E58'
+        // },
+
         primary: {
-          main: '#1c9c7c',
+          main: '#F5F3F5',
         },
         secondary: {
           main: '#9DF3C4',
         },
+
+        Icon: {
+          Dark: '#A93F55',
+          Light: '#F3F7F0',
+        },
+
         Ink: {
           Darkest: '#000000',
           Darker: '#222222',
@@ -116,7 +132,7 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
 
         Red: {
           Darkest: '#6B0206',
-          Base: '#E8282B',
+          Base: '#F2545B',
           Light: '#F94739',
           Lighter: '#FF9898',
           Lightest: '#FFE5E5',
@@ -130,12 +146,12 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
           Lightest: '#E5FFE5',
         },
         background: {
-          default: mode === 'dark' ? '#000000' : '#FCFBFA',
-          opposite: mode === 'dark' ? '#FCFBFA' : '#000000',
-          paper: mode === 'dark' ? '#131313' : '#FCFCFC',
+          default: mode === 'dark' ? '#0D1821' : '#FCFBFA',
+          opposite: mode === 'dark' ? '#FCFBFA' : '#0D1821',
+          paper: mode === 'dark' ? '#F2545B' : '#FCFCFC',
         },
         text: {
-          primary: mode === 'dark' ? '#FFFFFF' : '#000000',
+          primary: mode === 'dark' ? '#F5F3F5' : '#000000',
           secondary: '#999999',
           disabled: '#C3C1BD',
         },
