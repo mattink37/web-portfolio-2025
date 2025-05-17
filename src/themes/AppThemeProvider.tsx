@@ -114,7 +114,7 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
         },
 
         Ink: {
-          Darkest: '#000000',
+          Darkest: '#172B3A',
           Darker: '#222222',
           Dark: '#303437',
           Base: '#404446',

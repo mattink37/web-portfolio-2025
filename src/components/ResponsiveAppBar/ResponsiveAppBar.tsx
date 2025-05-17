@@ -12,13 +12,13 @@ const handleOpenUserMenu = () => {};
 
 const ResponsiveAppBar = () => {
   return (
-    <AppBar position="static" sx={{ borderRadius: '15px' }}>
+    <AppBar position="static" sx={{ mb: 2, borderRadius: '15px' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
             sx={{
               flexGrow: 0,
-              marginRight: '4cqw',
+              marginRight: '1cqw',
               borderStyle: 'solid',
               borderRadius: '8px',
               borderColor: (theme: Theme) => theme.palette.Icon.Light,

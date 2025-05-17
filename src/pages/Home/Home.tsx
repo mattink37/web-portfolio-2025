@@ -1,14 +1,15 @@
+import PageBody from '@/components/PageBody/PageBody';
 import ResponsiveAppBar from '@/components/ResponsiveAppBar/ResponsiveAppBar';
-import { Container, Grid2 } from '@mui/material';
+import { Container } from '@mui/material';
 import { useState } from 'react';
 
 const Home = () => {
-  const [displayNav, setDisplayNav] = useState(true);
+  const [displayNav] = useState(true);
 
   return (
-    <Container sx={{ py: 2, position: 'relative' }}>
+    <Container sx={{ py: 2, position: 'relative', display: 'flex', flexDirection: 'column' }}>
       {displayNav && <ResponsiveAppBar />}
-      <Grid2></Grid2>
+      <PageBody />
     </Container>
   );
 };
