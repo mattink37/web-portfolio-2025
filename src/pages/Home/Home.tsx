@@ -1,21 +1,14 @@
-import React from 'react';
-import TemplateTester from '@/components/TemplateTester/TemplateTester';
-import { Typography, Stack, Container } from '@mui/material';
-import Counter from '@/components/Counter/Counter';
+import ResponsiveAppBar from '@/components/ResponsiveAppBar/ResponsiveAppBar';
+import { Container, Grid2 } from '@mui/material';
+import { useState } from 'react';
 
 const Home = () => {
+  const [displayNav, setDisplayNav] = useState(true);
+
   return (
     <Container sx={{ py: 2, position: 'relative' }}>
-      <Stack gap={1} my={2}>
-        <Typography textAlign="center" variant="h2">
-          Vite-MUI-TS Template
-        </Typography>
-        <Typography textAlign="center" variant="subtitle1">
-          React + TS + Vite + Redux + RTK + MUI + RRD + Prettier
-        </Typography>
-      </Stack>
-      <TemplateTester />
-      <Counter />
+      {displayNav && <ResponsiveAppBar />}
+      <Grid2></Grid2>
     </Container>
   );
 };
