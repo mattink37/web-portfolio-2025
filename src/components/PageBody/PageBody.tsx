@@ -13,26 +13,32 @@ const PageBody = () => {
           }}
         >
           <Grid2 container>
-            <Grid2 size={{ xs: 6 }}>
+            <Grid2 size={{ xs: 12, sm: 6 }}>
               <Typography
                 variant="h1"
                 sx={{
                   fontFamily: 'inter',
-                  fontWeight: '400',
-                  fontSize: '1rem',
+                  fontWeight: 700,
+                  fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
                   p: '24px',
+                  color: '#fff',
+                  textShadow: '1px 2px 8px rgba(0,0,0,0.25)',
+                  letterSpacing: '0.02em',
                 }}
               >
                 Hi, I'm Matt Inkeles 👋
               </Typography>
-              <Divider variant="middle" />
+              <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)' }} />
               <Typography
                 variant="body1"
                 sx={{
                   fontFamily: 'inter',
-                  fontWeight: '400',
-                  fontSize: '1rem',
+                  fontWeight: 400,
+                  fontSize: { xs: '1.1rem', sm: '1.2rem' },
                   p: '24px',
+                  color: '#e0e0e0',
+                  lineHeight: 1.7,
+                  textShadow: '0 1px 4px rgba(0,0,0,0.15)',
                 }}
               >
                 I'm a software engineer from Atlanta, Georgia, passionate about building intuitive web applications and
@@ -42,7 +48,10 @@ const PageBody = () => {
               </Typography>
             </Grid2>
 
-            <Grid2 size={{ xs: 6 }} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p: '20px' }}>
+            <Grid2
+              size={{ xs: 12, sm: 6 }}
+              sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p: '20px' }}
+            >
               <Tooltip title="From the Nevada side of Lake Tahoe!">
                 <img
                   src={MattImage}
