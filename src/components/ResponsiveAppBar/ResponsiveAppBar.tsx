@@ -50,7 +50,15 @@ const ResponsiveAppBar = () => {
                 }}
                 variant="rounded"
               >
-                MI
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontFamily: 'Permanent Marker',
+                    color: (theme: Theme) => theme.palette.text.primary,
+                  }}
+                >
+                  MI
+                </Typography>
               </Avatar>
             </IconButton>
           </Box>
@@ -58,7 +66,14 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => {
               return (
                 <Button variant="text" onClick={() => onPageClick(page.id)}>
-                  <Typography variant="h6" sx={{ fontFamily: 'inter', fontWeight: '400', fontSize: '1rem' }}>
+                  <Typography
+                    variant="h3"
+                    textTransform="none"
+                    sx={{
+                      fontFamily: 'inter',
+                      color: (theme: Theme) => theme.palette.text.primary,
+                    }}
+                  >
                     {page.name}
                   </Typography>
                 </Button>
