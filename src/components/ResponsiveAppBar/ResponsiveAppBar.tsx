@@ -5,12 +5,30 @@ import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import { Button, Theme, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Home', 'My Work', 'More'];
-
-const handleOpenUserMenu = () => {};
+const pages = [
+  {
+    name: 'Home',
+    id: '',
+  },
+  {
+    name: 'My Work',
+    id: 'my-work',
+  },
+  {
+    name: 'Contact',
+    id: 'contact',
+  },
+];
 
 const ResponsiveAppBar = () => {
+  const navigate = useNavigate();
+
+  const onPageClick = (pageId: string) => {
+    navigate(`/${pageId}`);
+  };
+
   return (
     <AppBar position="static" sx={{ mb: 2, borderRadius: '15px' }}>
       <Container maxWidth="xl">
@@ -24,7 +42,7 @@ const ResponsiveAppBar = () => {
               borderColor: (theme: Theme) => theme.palette.Icon.Light,
             }}
           >
-            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <IconButton sx={{ p: 0 }}>
               <Avatar
                 sx={{
                   bgcolor: (theme: Theme) => theme.palette.Icon.Dark,
@@ -39,9 +57,9 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 1 }}>
             {pages.map((page) => {
               return (
-                <Button variant="text">
+                <Button variant="text" onClick={() => onPageClick(page.id)}>
                   <Typography variant="h6" sx={{ fontFamily: 'inter', fontWeight: '400', fontSize: '1rem' }}>
-                    {page}
+                    {page.name}
                   </Typography>
                 </Button>
               );
