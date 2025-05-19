@@ -42,7 +42,7 @@ const ResponsiveAppBar = () => {
               borderColor: (theme: Theme) => theme.palette.Icon.Light,
             }}
           >
-            <IconButton sx={{ p: 0 }}>
+            <IconButton onClick={() => onPageClick(pages[0]?.id)} sx={{ p: 0 }}>
               <Avatar
                 sx={{
                   bgcolor: (theme: Theme) => theme.palette.Icon.Dark,

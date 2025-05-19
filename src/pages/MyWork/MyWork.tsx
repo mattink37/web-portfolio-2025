@@ -1,6 +1,7 @@
 import { Divider, Grid2, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from 'react-router-dom';
 
 const MyWork = () => {
@@ -52,6 +53,15 @@ const MyWork = () => {
             }}
           >
             <LinkedInIcon sx={{ color: (theme) => theme.palette.primary.main, verticalAlign: 'middle' }} />
+          </Link>
+          <Link
+            to="https://github.com/mattink37"
+            style={{
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+          >
+            <GitHubIcon sx={{ color: (theme) => theme.palette.primary.main, verticalAlign: 'middle' }} />
           </Link>
           <br />
           Please feel free to reach out!
