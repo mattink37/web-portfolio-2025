@@ -1,5 +1,4 @@
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { useAppSelector } from '@/app/store';
 import { PaletteMode } from '@mui/material';
 import React from 'react';
 
@@ -87,7 +86,7 @@ declare module '@mui/material/Typography' {
   }
 }
 export const AppThemeProvider: React.FC<Props> = ({ children }) => {
-  const mode = useAppSelector((state) => state.user.mode);
+  const mode = 'dark' //useAppSelector((state) => state.user.mode); remove this line when you implement the mode toggle
   const theme = responsiveFontSizes(
     createTheme({
       palette: {
