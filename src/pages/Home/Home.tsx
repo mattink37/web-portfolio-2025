@@ -1,6 +1,8 @@
 import { Button, Divider, Grid2, Tooltip, Typography, Box, Chip, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import MattImage from '@/assets/IMG_7758.jpg';
+import AvailabilityPill from '@/components/AvailabilityPill/AvailabilityPill';
 
 // Shared entrance: fade up from below. Each element passes its own delay via transition.
 const entered = { opacity: 1, y: 0 };
@@ -9,49 +11,13 @@ const hidden = { opacity: 0, y: 30 };
 const stack = ['React', 'TypeScript', 'Material UI', 'Responsive Design', 'APIs', 'Performance', 'Clean Code', 'Vite'];
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <Grid2 container sx={{ py: { xs: 4, sm: 4 } }}>
       {/* Text column */}
       <Grid2 size={{ xs: 12, sm: 12, md: 7 }} sx={{ px: { xs: 2, sm: 4 } }}>
         {/* Availability pill */}
-        <motion.div
-          initial={hidden}
-          animate={entered}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-        >
-          <Box
-            component="span"
-            sx={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 1,
-              px: 1.5,
-              py: 0.5,
-              borderRadius: '999px',
-              bgcolor: 'rgba(255,255,255,0.06)',
-              border: '1px solid rgba(255,255,255,0.14)',
-              mb: 3,
-            }}
-          >
-            <Box
-              component="span"
-              sx={{
-                width: 11,
-                height: 11,
-                borderRadius: '50%',
-                bgcolor: '#4cdd96',
-                animation: 'mic-pulse 2s ease-in-out infinite',
-                display: 'inline-block',
-              }}
-            />
-            <Typography
-              variant="body2"
-              sx={{ color: '#d9ffe9', fontFamily: 'inter', fontSize: '0.9rem', fontWeight: 600 }}
-            >
-              Open to freelance &amp; contract website work
-            </Typography>
-          </Box>
-        </motion.div>
+        <AvailabilityPill />
 
         {/* Staggered headline */}
         <Box sx={{ mb: 2 }}>
@@ -127,8 +93,7 @@ const Home = () => {
         {/* CTAs */}
         <Stack direction="row" spacing={2} sx={{ mt: 3, flexWrap: 'wrap' }}>
           <Button
-            component="a"
-            href="/my-work"
+            onClick={() => navigate('/services')}
             variant="contained"
             size="large"
             sx={{
@@ -143,8 +108,7 @@ const Home = () => {
             See what I can build
           </Button>
           <Button
-            component="a"
-            href="/contact"
+            onClick={() => navigate('/contact')}
             variant="outlined"
             size="large"
             sx={{

@@ -5,6 +5,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import StorageIcon from '@mui/icons-material/Storage';
 import SpeedIcon from '@mui/icons-material/Speed';
 import { motion } from 'framer-motion';
+import AvailabilityPill from '@/components/AvailabilityPill/AvailabilityPill';
 
 const entered = { opacity: 1, y: 0 };
 const hidden = { opacity: 0, y: 30 };
@@ -38,6 +39,7 @@ const MyWork = () => {
   return (
     <Grid2 container sx={{ py: { xs: 4, sm: 4 } }}>
       <Grid2 size={{ xs: 12 }} sx={{ px: { xs: 2, sm: 4 } }}>
+        <AvailabilityPill />
         <motion.div initial={hidden} animate={entered} transition={{ duration: 0.6, ease: 'easeOut' }}>
           <Typography
             variant="h1"

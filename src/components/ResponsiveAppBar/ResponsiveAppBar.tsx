@@ -13,8 +13,8 @@ const pages = [
     id: '',
   },
   {
-    name: 'My Work',
-    id: 'my-work',
+    name: 'Services',
+    id: 'services',
   },
   {
     name: 'Contact',

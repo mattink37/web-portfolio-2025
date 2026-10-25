@@ -3,6 +3,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { motion } from 'framer-motion';
+import AvailabilityPill from '@/components/AvailabilityPill/AvailabilityPill';
 
 const entered = { opacity: 1, y: 0 };
 const hidden = { opacity: 0, y: 30 };
@@ -11,6 +12,7 @@ const Contact = () => {
   return (
     <Grid2 container sx={{ py: { xs: 4, sm: 4 } }}>
       <Grid2 size={{ xs: 12 }} sx={{ px: { xs: 2, sm: 4 } }}>
+        <AvailabilityPill />
         <motion.div initial={hidden} animate={entered} transition={{ duration: 0.6, ease: 'easeOut' }}>
           <Typography
             variant="h1"
@@ -39,9 +41,9 @@ const Contact = () => {
             }}
           >
             <Box component="span" className="mic-gradient-text">
-              Available for freelance and contract work
+              Let's build something great
             </Box>{' '}
-            right now.
+            together.
           </Typography>
         </motion.div>
 
