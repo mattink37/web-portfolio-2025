@@ -43,8 +43,8 @@ const projects: Project[] = [
 
 const MyWork = () => {
   return (
-    <Grid2 container spacing={3} sx={{ py: { xs: 3, sm: 4 } }}>
-      <Grid2 size={{ xs: 12 }}>
+    <Grid2 container sx={{ py: { xs: 4, sm: 4 } }}>
+      <Grid2 size={{ xs: 12 }} sx={{ px: { xs: 2, sm: 4 } }}>
         <Typography
           variant="h1"
           sx={{
@@ -76,12 +76,12 @@ const MyWork = () => {
         </Typography>
       </Grid2>
 
-      <Grid2 size={{ xs: 12 }}>
+      <Grid2 size={{ xs: 12 }} sx={{ px: { xs: 2, sm: 4 } }}>
         <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)', mb: 2 }} />
       </Grid2>
 
       {projects.map((project, index) => (
-        <Grid2 key={project.name} size={{ xs: 12, sm: 6, md: 6 }}>
+        <Grid2 key={project.name} size={{ xs: 12, sm: 6, md: 6 }} sx={{ px: { xs: 2, sm: 4 }, mb: 3 }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -143,7 +143,7 @@ const MyWork = () => {
         </Grid2>
       ))}
 
-      <Grid2 size={{ xs: 12 }} sx={{ mt: 3 }}>
+      <Grid2 size={{ xs: 12 }} sx={{ mt: 3, px: { xs: 2, sm: 4 } }}>
         <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)', mb: 3 }} />
         <Typography
           variant="h2"

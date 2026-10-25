@@ -68,8 +68,8 @@ const Home = () => {
 						}}
 					>
 						I'm a software engineer based in Atlanta, Georgia, with over five years of experience solving
-						real-world problems in the tech industry. I currently work at NCR Voyix, building next-generation
-						point-of-sale systems for the retail space.
+						real-world problems in the tech industry. I currently work at Visa as a senior software engineer,
+						focused on innovation in the security space.
 						<br />
 						<br />
 						My day-to-day involves crafting responsive user interfaces with React and TypeScript, integrating

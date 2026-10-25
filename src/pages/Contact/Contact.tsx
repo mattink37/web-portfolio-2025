@@ -5,8 +5,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Contact = () => {
   return (
-    <Grid2 container sx={{ py: { xs: 3, sm: 4 } }}>
-      <Grid2 size={{ xs: 12 }}>
+    <Grid2 container sx={{ py: { xs: 4, sm: 4 } }}>
+      <Grid2 size={{ xs: 12 }} sx={{ px: { xs: 2, sm: 4 } }}>
         <Typography
           variant="h1"
           sx={{
