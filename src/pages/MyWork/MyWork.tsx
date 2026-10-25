@@ -1,4 +1,4 @@
-import { Button, Box, Card, CardContent, Chip, Divider, Grid2, Stack, Typography } from '@mui/material';
+import { Button, Box, Card, CardContent, Divider, Grid2, Stack, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import DevicesIcon from '@mui/icons-material/Devices';
 import CodeIcon from '@mui/icons-material/Code';
@@ -32,8 +32,6 @@ const capabilities: { icon: typeof CodeIcon; title: string; text: string }[] = [
     text: 'Optimized for speed and reliability so visitors stay engaged and convert.',
   },
 ];
-
-const stack = ['React', 'TypeScript', 'Material UI', 'Responsive Design', 'APIs', 'Performance', 'Clean Code', 'Vite'];
 
 const MyWork = () => {
   return (
@@ -70,7 +68,7 @@ const MyWork = () => {
             <Box component="span" className="mic-gradient-text">
               Modern, fast, conversion-focused websites
             </Box>{' '}
-            for businesses that want to look as good online as they do in person.
+            for your business.
           </Typography>
         </motion.div>
 
@@ -85,10 +83,8 @@ const MyWork = () => {
             maxWidth: 720,
           }}
         >
-          I'm a senior software engineer at Visa, one of the world's largest technology companies,
-          where I work on security innovation, and I build websites for businesses on the side.
-          My day-to-day work lives behind a corporate account I can't show publicly, so instead of
-          a gallery of private repos, here's what I bring to every project.
+          My day-to-day work as a developer lives behind a corporate account I can't show
+          publicly, so instead of a gallery of private repos, here's what I bring to every project.
         </Typography>
 
         <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)', mt: 2, mb: 3 }} />
@@ -146,33 +142,6 @@ const MyWork = () => {
           </motion.div>
         </Grid2>
       ))}
-
-      {/* Tech marquee */}
-      <Grid2 size={{ xs: 12 }} sx={{ mt: 4, px: { xs: 2, sm: 4 } }}>
-        <Box className="mic-marquee" sx={{ display: 'block', width: '100%' }}>
-          <Box className="mic-marquee-track" sx={{ display: 'inline-block' }}>
-            {(() => {
-              const twice = [...stack, ...stack, ...stack, ...stack];
-              return twice.map((tech, i) => (
-                <Chip
-                  key={`${tech}-${i}`}
-                  label={tech}
-                  variant="outlined"
-                  sx={{
-                    ml: '24px',
-                    my: '12px',
-                    color: 'rgba(255,255,255,0.78)',
-                    borderColor: 'rgba(255,255,255,0.18)',
-                    bgcolor: 'rgba(255,255,255,0.04)',
-                    fontSize: '1rem',
-                    '& .MuiChip-label': { fontWeight: 600 },
-                  }}
-                />
-              ));
-            })()}
-          </Box>
-        </Box>
-      </Grid2>
 
       {/* CTA */}
       <Grid2 size={{ xs: 12 }} sx={{ mt: 4, px: { xs: 2, sm: 4 } }}>
