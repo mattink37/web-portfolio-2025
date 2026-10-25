@@ -79,14 +79,14 @@ const Home = () => {
               textShadow: '0 1px 4px rgba(0,0,0,0.25)',
             }}
           >
-            I'm a senior software engineer in Atlanta with deep experience building responsive
-            interfaces with React and TypeScript, wiring up APIs, and shipping software that holds
-            up under real traffic. Right now I work at Visa focused on innovation in the security space.
+            I'm a senior software engineer at Visa, one of the world's largest technology
+            companies, where I work on security innovation. On the side, I build fast, modern
+            websites for businesses that want to look as good online as they do in person.
             <br />
             <br />
-            Day to day I craft clean, maintainable frontends and I love turning an idea into a
-            polished, working site. If you run a business that needs a better web presence, I can
-            handle the build from concept to launch.
+            Day to day I work with React, TypeScript, and a deep focus on responsive design and
+            performance. I love turning an idea into a polished, working site, and I handle the
+            build from concept to launch.
           </Typography>
         </motion.div>
 

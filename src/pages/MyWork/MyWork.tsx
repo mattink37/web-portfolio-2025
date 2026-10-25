@@ -85,14 +85,13 @@ const MyWork = () => {
             maxWidth: 720,
           }}
         >
-          I'm a senior software engineer by day and a contract web developer by side.
-          Most of my professional work lives in environments I can't show publicly, so
-          instead of a gallery of private repos, here's what I bring to every project.
+          I'm a senior software engineer at Visa, one of the world's largest technology companies,
+          where I work on security innovation, and I build websites for businesses on the side.
+          My day-to-day work lives behind a corporate account I can't show publicly, so instead of
+          a gallery of private repos, here's what I bring to every project.
         </Typography>
-      </Grid2>
 
-      <Grid2 size={{ xs: 12 }} sx={{ px: { xs: 2, sm: 4 } }}>
-        <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)', mb: 3 }} />
+        <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)', mt: 2, mb: 3 }} />
       </Grid2>
 
       {/* Capability cards */}
