@@ -1,11 +1,11 @@
-import { Divider, Grid2, Typography } from '@mui/material';
+import { Button, Divider, Grid2, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Link } from 'react-router-dom';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Contact = () => {
   return (
-    <Grid2 container>
+    <Grid2 container sx={{ py: { xs: 3, sm: 4 } }}>
       <Grid2 size={{ xs: 12 }}>
         <Typography
           variant="h1"
@@ -13,7 +13,6 @@ const Contact = () => {
             fontFamily: 'inter',
             fontWeight: 700,
             fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
-            p: '24px',
             color: '#fff',
             textShadow: '1px 2px 8px rgba(0,0,0,0.25)',
             letterSpacing: '0.02em',
@@ -21,41 +20,63 @@ const Contact = () => {
         >
           Contact Me
         </Typography>
-        <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)' }} />
+        <Divider variant="middle" sx={{ borderColor: 'rgba(255,255,255,0.2)', mt: 2, mb: 3 }} />
 
         <Typography
           variant="body1"
-          sx={(theme) => ({
+          sx={{
             fontFamily: 'inter',
-            fontWeight: 400,
-            fontSize: { xs: '1.1rem', sm: '1.2rem' },
-            p: '24px',
-            color: theme.palette.text.primary,
-            lineHeight: 1.7,
-            textShadow: '0 1px 4px rgba(0,0,0,0.15)',
-          })}
+            fontSize: { xs: '1.05rem', sm: '1.15rem' },
+            color: '#e0e0e0',
+            lineHeight: 1.75,
+            maxWidth: 680,
+            mb: 3,
+          }}
         >
-          <Link
-            to="mailto:mattinkeles37@gmail.com"
-            style={{
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-          >
-            <EmailIcon sx={{ color: (theme) => theme.palette.primary.main, verticalAlign: 'middle' }} />
-          </Link>
-          <Link
-            to="https://www.linkedin.com/in/mattinkeles/"
-            style={{
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-          >
-            <LinkedInIcon sx={{ color: (theme) => theme.palette.primary.main, verticalAlign: 'middle' }} />
-          </Link>
-          <br />
-          Please feel free to reach out!
+          If you're looking for help building or improving a website, I'm taking on
+          contract work and I'd love to hear what you have in mind. Send me an email and
+          I'll get back to you. You can also find me on LinkedIn and GitHub.
         </Typography>
+
+        <Grid2 container spacing={2}>
+          <Grid2>
+            <Button
+              component="a"
+              href="mailto:mattinkeles37@gmail.com"
+              variant="contained"
+              size="large"
+              startIcon={<EmailIcon />}
+            >
+              mattinkeles37@gmail.com
+            </Button>
+          </Grid2>
+          <Grid2>
+            <Button
+              component="a"
+              href="https://www.linkedin.com/in/mattinkeles/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outlined"
+              size="large"
+              startIcon={<LinkedInIcon />}
+            >
+              LinkedIn
+            </Button>
+          </Grid2>
+          <Grid2>
+            <Button
+              component="a"
+              href="https://github.com/mattink37"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outlined"
+              size="large"
+              startIcon={<GitHubIcon />}
+            >
+              GitHub
+            </Button>
+          </Grid2>
+        </Grid2>
       </Grid2>
     </Grid2>
   );

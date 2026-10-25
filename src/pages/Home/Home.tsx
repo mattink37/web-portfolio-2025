@@ -36,6 +36,21 @@ const Home = () => {
 						Hi, I'm Matt Inkeles 👋
 					</Typography>
 
+					<Typography
+						variant="subtitle1"
+						sx={{
+							fontFamily: 'inter',
+							fontWeight: 600,
+							fontSize: { xs: '1.1rem', sm: '1.25rem' },
+							color: '#cfd8ff',
+							lineHeight: 1.5,
+							mb: 2,
+						}}
+					>
+						I build fast, clean, responsive websites for businesses that need a
+						better one. Taking on contract website work.
+					</Typography>
+
 					<Divider
 						variant="middle"
 						sx={{ borderColor: 'rgba(255,255,255,0.2)', mb: 3 }}
